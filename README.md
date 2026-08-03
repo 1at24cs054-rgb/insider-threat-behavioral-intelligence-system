@@ -367,22 +367,6 @@ LICENSE
 
 ---
 
-# 📷 Screenshots
-
-> Add screenshots after deployment.
-
-- Login Page
-- Dashboard
-- Employee Management
-- Activity Monitoring
-- AI Risk Dashboard
-- UEBA Dashboard
-- Investigation Dashboard
-- Incident Dashboard
-- SOAR Dashboard
-
----
-
 # 🚀 Installation
 
 ## Clone Repository
