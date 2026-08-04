@@ -2,296 +2,105 @@
 
 # 🛡️ InsiderShield
 
-## Enterprise AI-Powered Insider Threat Detection & Response Platform
+### Enterprise AI-Powered Insider Threat Detection & Response Platform
 
-### Monitor • Detect • Analyze • Investigate • Respond
+Behavioral Intelligence • UEBA • AI Risk Scoring • Threat Investigation • SOAR Automation
 
-An enterprise-grade cybersecurity platform that continuously monitors employee activities, detects insider threats using AI-driven behavioral intelligence, performs User & Entity Behavior Analytics (UEBA), manages incidents, and orchestrates automated SOAR response playbooks.
-
-![React](https://img.shields.io/badge/Frontend-React%2019-61DAFB?style=for-the-badge&logo=react)
+![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
-![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite)
-![JWT](https://img.shields.io/badge/Auth-JWT-orange?style=for-the-badge)
-![TailwindCSS](https://img.shields.io/badge/UI-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge)
+![SQLAlchemy](https://img.shields.io/badge/ORM-SQLAlchemy-red?style=for-the-badge)
+![JWT](https://img.shields.io/badge/Auth-JWT-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
 
 </div>
 
 ---
 
-# 📖 Project Overview
+# 📖 Overview
 
-**InsiderShield** is an enterprise cybersecurity platform designed to detect and respond to insider threats by analyzing employee behavior, monitoring system activities, calculating AI-powered risk scores, performing User & Entity Behavior Analytics (UEBA), managing investigations, and executing automated SOAR response playbooks.
+**InsiderShield** is an enterprise cybersecurity platform that detects, analyzes, investigates, and responds to insider threats using AI-powered behavioral intelligence.
 
-The platform helps Security Operations Centers (SOCs) proactively identify malicious or suspicious insider behavior before it results in data breaches or security incidents.
+The system continuously monitors employee activities, establishes behavioral baselines, detects suspicious behavior, calculates AI-driven insider risk scores, performs User & Entity Behavior Analytics (UEBA), correlates security telemetry, automates threat investigations, and executes SOAR response playbooks through a centralized Security Operations Center (SOC) dashboard.
 
----
+The project follows a modular enterprise architecture inspired by modern security platforms such as:
 
-# 🎯 Problem Statement
-
-Organizations face increasing risks from insider threats, including:
-
-- Unauthorized access
-- Privilege abuse
-- Data exfiltration
-- Suspicious employee behavior
-- Off-hours system access
-- USB-based data theft
-- Insider misuse of cloud resources
-
-Traditional monitoring systems generate large volumes of alerts but often lack behavioral intelligence.
-
-**InsiderShield addresses this challenge by combining AI-driven risk scoring, UEBA, investigation workflows, and automated response capabilities into a single enterprise platform.**
+- Microsoft Defender XDR
+- Microsoft Sentinel
+- IBM QRadar
+- Splunk Enterprise Security
+- CrowdStrike Falcon
 
 ---
 
-# 🚀 Key Features
+# 🎯 Project Objectives
 
-## 🔐 Authentication & Access Control
-
-- JWT Authentication
-- Role-Based Access Control (RBAC)
-- Secure Login
-- Protected Routes
-- User Profile Management
-
----
-
-## 👥 Employee & Identity Management
-
-- Employee Directory
-- Employee Profiles
-- Department Management
-- Role Mapping
-- Asset Association
+- Detect insider threats using behavioral analytics
+- Monitor employee activities in real time
+- Build behavioral baselines
+- Identify abnormal user behavior
+- Calculate AI-powered risk scores
+- Perform UEBA and Entity Analytics
+- Automate investigations
+- Generate security intelligence reports
+- Execute SOAR response playbooks
+- Provide a centralized SOC dashboard
 
 ---
 
-## 📊 Activity Monitoring
-
-- Login Monitoring
-- Logout Tracking
-- File Downloads
-- File Uploads
-- Application Usage
-- USB Device Monitoring
-- VPN Activity
-- Network Events
-- Privilege Changes
-
----
-
-## 🧠 Behavioral Profiling Engine
-
-- Login Pattern Analysis
-- Work Pattern Monitoring
-- Device Usage Analysis
-- Resource Access Frequency
-- Behavioral Baseline Generation
-- Historical Trend Analysis
-
----
-
-## 🚨 Threat Detection Engine
-
-- Suspicious Login Detection
-- Unauthorized Access Detection
-- Data Exfiltration Detection
-- Privilege Abuse Detection
-- Behavioral Anomaly Detection
-- Threat Severity Classification
-
----
-
-## 🤖 AI Risk Scoring Engine
-
-- Weighted Risk Calculation
-- Historical Risk Tracking
-- Explainable AI (XAI)
-- Confidence Score
-- Risk Recommendations
-- Risk Trend Analysis
-
----
-
-## 📈 User & Entity Behavior Analytics (UEBA)
-
-### User Analytics
-
-- Behavioral Baseline
-- Peer Group Comparison
-- Behavior Drift Detection
-- Risk Prediction
-- Outlier Detection
-
-### Entity Analytics
-
-- Device Monitoring
-- Server Monitoring
-- VPN Analytics
-- USB Device Analytics
-- Cloud Service Analytics
-- IP Address Monitoring
-- Browser Analytics
-
----
-
-## 🔍 Threat Investigation
-
-- Investigation Case Management
-- Unified Timeline
-- Evidence Collection
-- User & Entity Correlation
-- Analyst Workspace
-- Investigation Notes
-- Audit Logs
-- Explainable AI Recommendations
-
----
-
-## 🚨 Alert & Incident Management
-
-- Security Alert Generation
-- Alert Correlation
-- Incident Management
-- Incident Dashboard
-- Incident Timeline
-- Severity Classification
-- Analyst Assignment
-
----
-
-## ⚡ SOAR Response Playbooks
-
-Automated Security Response Actions
-
-- Suspend User Account
-- Revoke Active Sessions
-- Isolate Host
-- Block USB Device
-- Notify SOC Lead
-- Incident Containment
-
----
-
-## 📊 Security Dashboards
-
-- Executive Dashboard
-- SOC Dashboard
-- Risk Dashboard
-- UEBA Dashboard
-- Investigation Dashboard
-- Incident Dashboard
-
----
-
-## 📑 Reports & Analytics
-
-- Risk Analytics
-- Department Risk Reports
-- Security Reports
-- Threat Reports
-- Employee Reports
-- Interactive Charts
-- Historical Trends
-
----
-
-# 🏛️ System Workflow
+# 🏗 System Architecture
 
 ```text
-Employee Activities
-        │
-        ▼
-Activity Monitoring Engine
-        │
-        ▼
-Behavioral Profiling Engine
-        │
-        ▼
-Threat Detection Engine
-        │
-        ▼
-AI Risk Scoring Engine
-        │
-        ▼
-UEBA (User & Entity Analytics)
-        │
-        ▼
-Alert Generation
-        │
-        ▼
-Incident Correlation
-        │
-        ▼
-Threat Investigation
-        │
-        ▼
-SOAR Response Playbooks
-        │
-        ▼
-SOC Dashboard
+                    InsiderShield Platform
+
+                    ┌─────────────────────┐
+                    │ Authentication      │
+                    │ JWT + RBAC          │
+                    └──────────┬──────────┘
+                               │
+         ┌─────────────────────┼─────────────────────┐
+         │                     │                     │
+         ▼                     ▼                     ▼
+
+ Employee Management     Activity Monitoring    Behavior Analytics
+
+         │                     │                     │
+         └──────────────┬──────┴──────────────┬─────┘
+                        ▼
+               Threat Detection Engine
+                        │
+                        ▼
+             AI Risk Scoring Engine
+                        │
+                        ▼
+                 UEBA Intelligence
+                        │
+                        ▼
+            Threat Investigation Center
+                        │
+                        ▼
+      Alerts • Incidents • SOAR Playbooks
+                        │
+                        ▼
+        Enterprise Reports & Analytics
 ```
 
 ---
 
-# 🏗️ System Architecture
-
-```mermaid
-graph TD
-
-A[Employee Activities]
-
-B[Activity Monitoring]
-
-C[Behavior Profiling]
-
-D[Threat Detection]
-
-E[AI Risk Engine]
-
-F[UEBA]
-
-G[Alert Engine]
-
-H[Incident Manager]
-
-I[Threat Investigation]
-
-J[SOAR Playbooks]
-
-K[Security Dashboard]
-
-A --> B
-B --> C
-C --> D
-D --> E
-E --> F
-F --> G
-G --> H
-H --> I
-I --> J
-J --> K
-```
-
----
-
-# 🛠️ Technology Stack
+# 🚀 Technology Stack
 
 | Layer | Technology |
 |--------|------------|
-| Frontend | React 19 + Vite |
+| Frontend | React + Vite |
 | Styling | Tailwind CSS |
 | Backend | FastAPI |
-| Language | Python |
-| Database | SQLite |
 | ORM | SQLAlchemy |
-| Validation | Pydantic |
+| Database | SQLite |
 | Authentication | JWT |
+| Authorization | RBAC |
 | Charts | Recharts |
-| HTTP Client | Axios |
-| Version Control | Git & GitHub |
+| PDF Reports | ReportLab |
+| API | REST API |
 
 ---
 
@@ -299,75 +108,258 @@ J --> K
 
 ```text
 InsiderShield
-
-backend/
-
-    app/
-
-        api/
-
-        models/
-
-        repositories/
-
-        schemas/
-
-        services/
-
-        database/
-
-frontend/
-
-    src/
-
-        components/
-
-        layouts/
-
-        pages/
-
-        services/
-
-        hooks/
-
-        assets/
-
-docs/
-
-screenshots/
-
-README.md
-
-LICENSE
+│
+├── frontend
+│   ├── components
+│   ├── pages
+│   ├── services
+│   ├── routes
+│   └── assets
+│
+├── backend
+│   ├── app
+│   │   ├── api
+│   │   ├── models
+│   │   ├── repositories
+│   │   ├── schemas
+│   │   ├── services
+│   │   └── database
+│   │
+│   ├── seed scripts
+│   ├── verification tests
+│   └── requirements.txt
+│
+└── README.md
 ```
 
 ---
 
-# 📌 Completed Modules
+# ✅ Milestone 1 – Project Foundation
 
-| Module | Status |
-|----------|--------|
-| Authentication | ✅ |
-| RBAC | ✅ |
-| Employee Management | ✅ |
-| Department Management | ✅ |
-| Activity Monitoring | ✅ |
-| Behavioral Profiling | ✅ |
-| Threat Detection | ✅ |
-| AI Risk Scoring | ✅ |
-| Explainable AI | ✅ |
-| UEBA | ✅ |
-| Entity Analytics | ✅ |
-| Threat Investigation | ✅ |
-| Alert Management | ✅ |
-| Incident Management | ✅ |
-| SOAR Playbooks | ✅ |
-| Dashboards | ✅ |
-| Reports | ✅ |
+### ✔ Planning & Architecture
+
+- Enterprise system design
+- Modular backend architecture
+- Database schema design
+- REST API planning
+- Security architecture
+
+### ✔ Backend Setup
+
+- FastAPI configuration
+- SQLAlchemy integration
+- SQLite database
+- JWT Authentication
+- Role-Based Access Control
+
+### ✔ Frontend Setup
+
+- React + Vite
+- Tailwind CSS
+- Routing
+- Authentication Flow
+- Protected Routes
+- Enterprise UI Layout
 
 ---
 
-# 🚀 Installation
+# ✅ Milestone 2 – Core Security Platform
+
+## Dashboard
+
+- Enterprise SOC Dashboard
+- Security KPIs
+- Risk Trends
+- Activity Summary
+- Department Statistics
+
+## Employee Management
+
+- Employee Directory
+- Employee Profiles
+- Department Management
+- Security Overview
+
+## Activity Monitoring
+
+- Employee Telemetry
+- Login Monitoring
+- File Activities
+- Device Monitoring
+- Access Logs
+
+## Behavioral Profiling
+
+- Behavioral Baselines
+- Login Patterns
+- Work Pattern Analysis
+- Device Usage
+- Behavioral Deviations
+
+## Threat Detection
+
+- Insider Threat Detection
+- Threat Severity
+- Threat Scoring
+- AI Recommendations
+
+## Reports
+
+- Employee Reports
+- Risk Reports
+- Activity Reports
+- Security Reports
+
+---
+
+# ✅ Milestone 3 – Enterprise AI Security Intelligence
+
+## AI Risk Scoring Engine
+
+- Weighted AI Risk Calculation
+- Explainable AI (XAI)
+- Risk Breakdown
+- Historical Risk Trends
+- Department Risk Analytics
+
+---
+
+## UEBA Intelligence
+
+- User Behavior Analytics
+- Entity Behavior Analytics
+- Peer Comparison
+- Behavioral Drift
+- Risk Prediction
+- Entity Risk Assessment
+
+---
+
+## Threat Investigation Center
+
+- Case Management
+- Timeline Correlation
+- Evidence Collection
+- Analyst Notes
+- XAI Investigation Summary
+- Correlation Graphs
+
+---
+
+## Alert & Incident Management
+
+- Security Alerts
+- Incident Tracking
+- Incident Dashboard
+- Alert Correlation
+
+---
+
+## SOAR Response Playbooks
+
+- Account Suspension
+- Session Revocation
+- USB Blocking
+- Endpoint Isolation
+- SOC Notification
+- Automated Response Execution
+
+---
+
+## Enterprise PDF Reports
+
+Generate professional multi-page reports including
+
+- Employee Profile
+- Executive Summary
+- AI Risk Assessment
+- Explainable AI
+- UEBA Analytics
+- Threat Detection
+- Timeline
+- Alerts
+- Incidents
+- Investigations
+- SOAR Actions
+- Security Recommendations
+
+---
+
+# 📊 Platform Highlights
+
+✔ Enterprise SOC Dashboard
+
+✔ AI Risk Scoring
+
+✔ Explainable AI
+
+✔ User Behavior Analytics
+
+✔ Entity Behavior Analytics
+
+✔ Insider Threat Detection
+
+✔ Threat Investigation
+
+✔ Alert Management
+
+✔ Incident Response
+
+✔ SOAR Automation
+
+✔ Enterprise PDF Reports
+
+✔ JWT Authentication
+
+✔ Role-Based Access Control
+
+✔ REST APIs
+
+---
+
+# 🔐 Security Features
+
+- JWT Authentication
+- Secure Password Hashing
+- Role-Based Authorization
+- Protected REST APIs
+- Employee Risk Classification
+- Threat Severity Analysis
+- Explainable AI
+- Automated Containment
+- Audit Logging
+
+---
+
+# 📄 Enterprise Reporting
+
+InsiderShield generates professional Security Intelligence Reports including
+
+- Employee Security Profile
+- Risk Intelligence
+- Behavioral Analytics
+- UEBA Summary
+- Threat History
+- Incident Summary
+- Investigation Status
+- SOAR Actions
+- Executive Recommendations
+
+---
+
+# 🧪 Testing & Verification
+
+The project includes
+
+- Database Seed Scripts
+- Backend Verification Scripts
+- API Testing
+- Production Build Validation
+- Enterprise Report Verification
+
+---
+
+# 🚀 Getting Started
 
 ## Clone Repository
 
@@ -375,92 +367,59 @@ LICENSE
 git clone https://github.com/1at24cs054-rgb/InsiderShield.git
 ```
 
----
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ## Backend
 
 ```bash
 cd backend
-
 pip install -r requirements.txt
-
 uvicorn app.main:app --reload
 ```
 
 ---
 
-## Frontend
+# 🎯 Key Achievements
 
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
----
-
-# 📡 API Documentation
-
-FastAPI automatically generates Swagger documentation.
-
-```
-http://localhost:8000/docs
-```
-
-Redoc
-
-```
-http://localhost:8000/redoc
-```
-
----
-
-# 🧪 Testing
-
-Run backend tests
-
-```bash
-python backend/test_risk_endpoints.py
-
-python backend/test_ueba_endpoints.py
-
-python backend/test_investigation_endpoints.py
-
-python backend/test_incident_endpoints.py
-```
-
-Build frontend
-
-```bash
-npm run build
-```
+- Enterprise-grade modular architecture
+- AI-powered insider risk scoring
+- Explainable AI recommendations
+- User & Entity Behavior Analytics
+- Threat Investigation workflows
+- Alert & Incident Management
+- SOAR response automation
+- Professional PDF security reporting
+- Enterprise SOC user experience
 
 ---
 
 # 🔮 Future Enhancements
 
-- Docker Deployment
-- PostgreSQL Support
-- Kafka Event Streaming
-- Microsoft Sentinel Integration
-- Splunk Integration
-- SIEM Connectors
-- Active Directory Integration
-- Email Security Analytics
-- MITRE ATT&CK Mapping
-- AI Security Copilot
-- Real-time WebSocket Alerts
+- Machine Learning anomaly detection
+- Real-time streaming telemetry
+- SIEM integration
+- Active Directory integration
+- Docker & Kubernetes deployment
+- PostgreSQL support
+- Email & Teams notifications
+- Cloud deployment (AWS/Azure)
+- Multi-tenant architecture
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developed By
 
 **Dhanush**
 
-Computer Science Engineering Student
+Enterprise AI-Based Insider Threat Detection & Response Platform
 
+Built using React, FastAPI, SQLAlchemy, SQLite, JWT Authentication, ReportLab, and modern cybersecurity concepts.
 
 ---
 
@@ -470,6 +429,8 @@ Computer Science Engineering Student
 
 ### Enterprise AI-Powered Insider Threat Detection & Response Platform
 
-Built using **React • FastAPI • SQLAlchemy • SQLite • JWT • Tailwind CSS**
+**Behavioral Intelligence • AI Risk Scoring • UEBA • SOAR • Threat Investigation**
+
+⭐ If you found this project useful, consider giving it a star!
 
 </div>
