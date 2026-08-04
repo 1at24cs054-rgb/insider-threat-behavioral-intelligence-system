@@ -372,7 +372,7 @@ LICENSE
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/InsiderShield.git
+git clone https://github.com/1at24cs054-rgb/InsiderShield.git
 ```
 
 ---
