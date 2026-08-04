@@ -1,5 +1,5 @@
 import re
-from pydantic import BaseModel, EmailStr, validator, ConfigDict
+from pydantic import BaseModel, field_validator, ConfigDict, Field
 from typing import Optional
 from uuid import UUID
 
@@ -7,12 +7,24 @@ class RegisterRequest(BaseModel):
     employee_id: str
     first_name: str
     last_name: str
-    email: EmailStr
+    email: str = Field(..., json_schema_extra={"example": "user@example.com"})
     password: str
     department_id: Optional[UUID] = None
     role_id: Optional[UUID] = None
+    department: Optional[str] = None
+    role: Optional[str] = None
 
-    @validator("password")
+    @field_validator("email", mode="after")
+    @classmethod
+    def validate_email(cls, v):
+        # Allow both standard emails and .local domains for dev
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$'
+        if not re.match(pattern, v):
+            raise ValueError("Invalid email format")
+        return v
+
+    @field_validator("password")
+    @classmethod
     def validate_password(cls, v):
         if len(v) < 8:
             raise ValueError("Password must be at least 8 characters long")
@@ -25,12 +37,32 @@ class RegisterRequest(BaseModel):
         return v
 
 class LoginRequest(BaseModel):
-    email: EmailStr
+    email: str = Field(..., json_schema_extra={"example": "user@example.com"})
     password: str
+
+    @field_validator("email", mode="after")
+    @classmethod
+    def validate_email(cls, v):
+        # Allow both standard emails and .local domains for dev
+        pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$'
+        if not re.match(pattern, v):
+            raise ValueError("Invalid email format")
+        return v
 
 class TokenPayload(BaseModel):
     sub: str
     exp: int
+
+class DepartmentInfo(BaseModel):
+    id: UUID
+    department_name: str
+    department_code: Optional[str] = None
+    model_config = ConfigDict(from_attributes=True)
+
+class RoleInfo(BaseModel):
+    id: UUID
+    role_name: str
+    model_config = ConfigDict(from_attributes=True)
 
 class EmployeeDetails(BaseModel):
     id: UUID
@@ -40,6 +72,8 @@ class EmployeeDetails(BaseModel):
     email: str
     department_id: Optional[UUID] = None
     role_id: Optional[UUID] = None
+    department: Optional[DepartmentInfo] = None
+    role: Optional[RoleInfo] = None
 
     model_config = ConfigDict(from_attributes=True)
 

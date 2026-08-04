@@ -2,11 +2,16 @@ from pathlib import Path
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import OperationalError
 from sqlalchemy.orm import sessionmaker
+
 from app.core.config import settings
 
 
 def _build_engine():
     database_url = settings.DATABASE_URL
+
+    if database_url.startswith("sqlite:///./") or database_url == "sqlite:///dev.db":
+        db_path = (Path(__file__).resolve().parents[2] / "dev.db").resolve()
+        database_url = f"sqlite:///{db_path}"
 
     if database_url.startswith("postgresql"):
         try:
@@ -22,5 +27,20 @@ def _build_engine():
     return create_engine(database_url, pool_pre_ping=True)
 
 
+
 engine = _build_engine()
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine,
+)
+
+
+# FastAPI Dependency
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
